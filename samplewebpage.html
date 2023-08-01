@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <style>
+        p {
+            margin-left: 5em;
+            margin-right: 5em;
+            color:antiquewhite
+        }
+        *{box-sizing: border-box;}
+        .left {
+            background-color: gold;
+            padding: 20px;
+            float: left;
+            width: 20%;
+        }
+        .main{
+            background-color: red;
+            padding: 20px;
+            float:right;
+            width: 60%;
+        }
+        @media screen and (max-width: 800px) {
+            .left, .main {
+                width: 100%;
+            }
+        }
+
+        </style>
+        <title>
+            Responsive Web Design Sample
+        </title>
+    </head>
+<body>
+    <h1>Sample Web Page for Responsive Web Design</h1>
+    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" style="max-width:100%;height:auto;">
+    <picture>
+        <source srcset="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" style="max-width:100%;height:auto;" media="(max-width: 600px)">
+        <source srcset="https://images.unsplash.com/photo-1498887960847-2a5e46312788?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" style="max-width:100%;height:auto;" media="(max-width: 1500px)">
+        <source srcset="https://plus.unsplash.com/premium_photo-1683134240084-ba074973f75e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fGNhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60" style="max-width:100%;height:auto;">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2FyfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60" style="max-width:100%;height:auto;" alt="Car">
+      </picture> 
+      <h2 style="font-size:10vw">This text has a responsive size.</h2> 
+    
+    <div class="left">
+        Media Queries Left Menu
+    </div>
+    <div class="main">
+        Media Queries Main Text
+    </div>
+
+</body>
