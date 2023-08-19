@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Concepts</title>
+    </head>
+    <body>
+        <h1>Javascript Testing</h1>
+
+        <p id="strings"></p>
+        <p id="text1"></p>
+        <p id="sliced"></p>
+        <p id="replaced"></p>
+        <p id="case"></p>
+        <p id="pad"></p>
+        <script>
+            let text = "This is a string with text";
+            document.getElementById("strings").innerHTML = text;
+
+            let text1 = "This is a sliced string";
+            let slice = text1.slice(0, 15);
+            document.getElementById("text1").innerHTML = text1;
+            document.getElementById("sliced").innerHTML = slice;
+
+            let text2 = "In this sentence, a word is replaced";
+            let text3 = text2.replace("sentence", "statement");
+            document.getElementById("replaced").innerHTML = text3;
+
+            let lower = "this is converted to uppercase";
+            let upper = lower.toUpperCase();
+            document.getElementById("case").innerHTML = upper;
+
+            let text4 = "This string is padded";
+            let padded = text4.padStart(23, "!");
+            document.getElementById("pad").innerHTML = padded;
+        </script>
+
+        <p id="num1"></p>
+        <p id="num2"></p>
+        <p id="num3"></p>
+        <p id="num4"></p>
+        <p id="num5"></p>
+        
+        <script>
+            let x = 1234567890;
+            document.getElementById("num1").innerHTML = x;
+
+            let a = (24 + 6) * 2;
+            document.getElementById("num2").innerHTML = a;
+
+            let b = 12;
+            let c = 8;
+            let e = b + c;
+            document.getElementById("num3").innerHTML = e;
+
+            let f = -2 / 0;
+            document.getElementById("num4").innerHTML = f;
+
+            g = NaN;
+            h = 4;
+            i = g + h;
+            document.getElementById("num5").innerHTML = i;
+        </script>
+
+        <p id="array1"></p>
+        <p id="array2"></p>
+        <p id="array3"></p>
+        <p id="array4"></p>
+        <p id="array5"></p>
+
+        <script>
+            const colourarray = ["Red", "Blue", "Yellow", "Green"];
+
+            document.getElementById("array1").innerHTML = colourarray;
+
+            let csize = colourarray.length;
+            document.getElementById("array2").innerHTML = csize;
+
+            let pop = colourarray.pop();
+            document.getElementById("array3").innerHTML = pop;
+
+            let pushed = colourarray.push("Purple");
+            document.getElementById("array4").innerHTML = pushed;
+
+            colourarray [4] = "Purple";
+            document.getElementById("array5").innerHTML = colourarray;
+
+        </script>
+
+        <p>The time and date currently is: </p>
+        <p id="date"></p>
+        <script>
+            const d = new Date();
+            d.toString();
+            document.getElementById("date").innerHTML = d;
+        </script>
+
+        <p>It has been this may days since the week started: </p>
+        <p id="day"></p>
+        <script>
+            const daynumb = new Date().getDay();
+            daynumb.toString();
+            document.getElementById("day").innerHTML = daynumb;
+        </script>
+
+        <script>
+            function TimeGreeting() {
+                let greeting;
+                let time = new Date().getHours();
+                if (time < 10) {
+                    greeting = "Good Morning";
+                }
+                else if (time > 20) {
+                    greeting = "Good Day";
+                }
+                else {
+                    greeting = "Good Evening";
+                }
+                document.getElementById("greeting").innerHTML = greeting;
+            }
+        </script>
+        <p>Click the button to get a dynamic time-based greeting.</p>
+        <button onclick="TimeGreeting()">Greeting Button</button>
+        <p id="greeting"></p>
+        
+        <script>
+            function MonthQuarter() {
+                let quarter;
+                let month = new Date().getMonth();
+                if (month <= 3) {
+                    quarter = "It is the first quarter of the year.";
+                }
+                else if (month <= 6 ) {
+                    quarter = "It is the second quarter of the year.";
+                }
+                else if (month <= 9) {
+                    quarter = "It is the third quarter of the year.";
+                }
+                else {
+                    quarter = "It is the fourth quarter of the year.";
+                }
+                document.getElementById("quarter").innerHTML = quarter;
+            }
+        </script>
+        <p>Click the button to know which quarter of the year it is.</p>
+        <button onclick="MonthQuarter()">Quarterly Button</button>
+        <p id="quarter"></p>
+
+        <script>
+            function WeekHalf() {
+            let half;
+            let day = new Date().getDay();
+            if (day <= 3) {
+                half = "It is the first half of the week";
+           }
+           else if (day == 4) {
+                half = "It is the middle of the week"
+           }
+           else {
+                half = "It is the second half of the week"
+           }
+                document.getElementById("half").innerHTML = half;
+            }
+        </script>
+        <p>Click the button to display which half of the week it is.</p>
+        <button onclick="WeekHalf()">Week Half Button</button>
+        <p id="half"></p> 
+    </body>
+</html>
